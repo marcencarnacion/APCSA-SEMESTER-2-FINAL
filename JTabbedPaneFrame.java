@@ -1,17 +1,13 @@
+import javax.swing.*;
 import java.awt.BorderLayout;
-import javax.swing.JFrame;
-import javax.swing.JTabbedPane;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.SwingConstants;
-import javax.swing.JButton;
+import java.awt.event.*;
 
 public class JTabbedPaneFrame extends JFrame
 {
   public JTabbedPaneFrame()
   {
     super("Rioux Store Simulator");
-
+    
     //create the tabbed pane/ holds tab formatting
     JTabbedPane tabPane = new JTabbedPane();
 
@@ -25,9 +21,21 @@ public class JTabbedPaneFrame extends JFrame
     JLabel label2 = new JLabel ("Objective: Please select items to fill out your grocery list", SwingConstants.CENTER);
     JPanel panel2 = new JPanel();
     panel2.add(label2);
+
     //In case you want to add buttons on the sides=
     //panel2.setLayout(new BorderLayout());
-    panel2.add(new JButton("Carrots"), BorderLayout.NORTH);
+    JLabel foodLabel = new JLabel("Food Label");
+    JButton carrots = new JButton("Carrots");
+    carrots.addActionListener(new ActionListener()
+    {
+      public void actionPerformed(ActionEvent e)
+      {
+        foodLabel.setText("hi");
+      }
+    });
+
+    panel2.add(carrots, BorderLayout.NORTH);
+    panel2.add(foodLabel, BorderLayout.LINE_END);
     panel2.add(new JButton("Lettuce"), BorderLayout.SOUTH);
     panel2.add(new JButton("Cereal"), BorderLayout.WEST);
     panel2.add(new JButton("Steak"), BorderLayout.EAST);

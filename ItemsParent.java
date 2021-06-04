@@ -1,4 +1,4 @@
-public abstract class ItemsParent 
+public class ItemsParent 
 {
   //1 Instance Variables 
   public String itemName;
@@ -15,7 +15,7 @@ public abstract class ItemsParent
 
   public ItemsParent()
   {
-    this.itemName = ";
+    this.itemName = "";
     this.price = 0;
     this.isOnList = false;
   }//end ItemsParent constructor (0 Argument)
@@ -33,6 +33,6 @@ public abstract class ItemsParent
   //3 toString
   public String toString()
   {
-    return "Name: " + itemName + "\n Price: " + price + "\n On List?: " + isOnList;
+    return "Name: " + itemName + "\nPrice: $" + price + "\nOn List?: " + isOnList;
   }//end toString
 }//end class Restaurant
