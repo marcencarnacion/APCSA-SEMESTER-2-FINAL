@@ -1,4 +1,4 @@
-import javax.swing.*;
+/*import javax.swing.*;
 import java.awt.BorderLayout;
 import java.awt.event.*;
 
@@ -62,3 +62,4 @@ public class JTabbedPaneFrame extends JFrame
     add(tabPane);
   }//end default and only constructor
 }//end class
+*/

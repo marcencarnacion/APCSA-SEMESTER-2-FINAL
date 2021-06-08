@@ -33,6 +33,6 @@ public class ItemsParent
   //3 toString
   public String toString()
   {
-    return "Name: " + itemName + "\nPrice: $" + price + "\nOn List?: " + isOnList;
+    return "Name: " + itemName + "\nPrice: $" + price + "\nOn List: " + isOnList;
   }//end toString
 }//end class Restaurant
