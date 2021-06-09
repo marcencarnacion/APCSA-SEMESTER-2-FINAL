@@ -53,6 +53,23 @@ class Main
     else 
       System.out.println("Too bad, you're going to chekout anyways");
 
+    System.out.println("Proceeding to checkout. Your total is $8. Enter payment: ");
+    int payment = scan.nextInt();
+    int price = 8;
+    if (price == payment)
+    {
+      System.out.println("Thank you for shopping with us. Have a great day!");
+    }
+    if (payment < price)
+    {
+      int under = price - payment;
+      System.out.println("You underpayed by $" + under + ". It's okay. We'll let it slide for you.");
+    }
+    else if (payment > price)
+    {
+      int over = payment - price;
+      System.out.println("You overpayed by $" + over + ". Here is your change. Have a great day!");
+    }
 
 
 
