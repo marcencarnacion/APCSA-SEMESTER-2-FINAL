@@ -44,8 +44,32 @@ public class ItemsParent
   public void setName(String itemName)
   {
     this.itemName = itemName;
-  }//brain method
-  
+  }//end itemName setter
+
+  //This method is overriden in the Potato class
+  public String prepare()
+  {
+    return "You put " + itemName + " away.";
+  }//end prepare method
+
+  //This method is overriden in the Potato class
+  public void cook()
+  {
+    System.out.println("You cook the food");
+  }//end cook method
+
+  //This method is overriden in the Potato class
+  public void condiments()
+  {
+    System.out.println("You eat the food");
+  }//end condiments method
+
+  //This method is overriden in the Potato class
+  public String eat()
+  {
+    return "You are now eating";
+  }//end condiments method
+
   //3 toString
   public String toString()
   {

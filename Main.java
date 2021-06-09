@@ -5,11 +5,14 @@ class Main
   public static void main(String[] args) 
   {
     //Instantiating objects: GroceryList, Scanner, Potato, Cereal, Chips
+    //An ArrayList is utilized 
     ArrayList<String> GroceryList = new ArrayList<>();
     Scanner scan = new Scanner(System.in);
+
+    //The following are instance of polymorphism: Using the parent class ItemsParent and child classes Potatoes, Cereal, and Chips
     ItemsParent potato = new Potatoes ("potato", 1, true, "vegetable", "Idaho");
-    ItemsParent cereal = new Cereal("Froot Loops", 4, true, "Kellogs", "crunchy");
-    ItemsParent chips = new Chips("Doritos", 3, true, "crispy", 150);
+    ItemsParent cereal = new Cereal("Cocoa Puffs", 4, true, "Kellogs", "crunchy");
+    ItemsParent chips = new Chips("Doritos", 3, true, "cheesy", 150);
     Store riouxStore = new Store("Rioux Store", "Marc Encarnacion", 8, 10, 2021);
 
     //Est up the key infomation (name of store and objective)
@@ -43,7 +46,7 @@ class Main
     }
 
     //If-Else Statement: Asking user to checkout
-    System.out.println("Would you like to proceed to checkout?");
+    System.out.println("Would you like to proceed to checkout? (yes or no)");
     if (scan.nextLine().equals("yes"))
     {
       System.out.println("Alright, proceeding to checkout.");
@@ -51,22 +54,36 @@ class Main
     else 
       System.out.println("Too bad, you're going to chekout anyways");
 
+    //The following is how the user pays for their groceries
+    //The if and else if statements use ==, <, and > with each scenario providing different dialogue
     System.out.println("Proceeding to checkout. Your total is $8. Enter payment: ");
     int payment = scan.nextInt();
     int price = 8;
     if (price == payment)
     {
       System.out.println("Thank you for shopping with us. Have a great day!");
-    }
+    }//end if statement
     if (payment < price)
     {
       int under = price - payment;
       System.out.println("You underpayed by $" + under + ". It's okay. We'll let it slide for you.");
-    }
+    }//end if statement
     else if (payment > price)
     {
       int over = payment - price;
       System.out.println("You overpayed by $" + over + ". Here is your change. Have a great day!");
-    }
-  }
-}
+    }//end else if statment
+
+    //This is the next part of the storyline: You go back home and prepare the food you bought.
+    System.out.println("\n---Cooking at Rioux's House--- (Part 2)");
+    System.out.println("You return home and prepare your groceries");
+    //Methods from one class are called from another clas (prepare method)
+    String eat = new String ("You eat");
+    System.out.println(chips.prepare());
+    System.out.println(cereal.prepare());
+    System.out.println(potato.prepare());
+    potato.cook();
+    potato.condiments();
+    System.out.println(potato.eat(eat));
+  }//end main method
+}//end Main class
