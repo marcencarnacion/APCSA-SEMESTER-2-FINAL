@@ -70,6 +70,7 @@ public class Potatoes extends ItemsParent
     condiments.add("barbeque");
     condiments.add("thousand island");
     System.out.println("You have a selection of condiments:");
+    int size = condiments.size() - 2;
     for (int i = 0; i < condiments.size(); i++)
     {
       //data is counted in the context of a loop
@@ -77,19 +78,20 @@ public class Potatoes extends ItemsParent
       //data is moved in the context of a loop
       System.out.println(condiments.get(i));
     }//end for loop
+
     //data is added in the context of a loop
-    System.out.println("Add a condiment: ");
-    condiments.add(scan.nextLine());
+    for (int i = 0; i < size; i++)
+    {
+      System.out.println("Add a condiment: ");
+      condiments.add(scan.nextLine());
+    }//end for loop
+
+    System.out.println("Your new list of condiments are: ");
     for (int i = 0; i < condiments.size(); i++)
     {
-      System.out.println("Your new list of condiments are: " + condiments.get(i));
-    }//end for loop
+      System.out.print(condiments.get(i) + ", ");
+    }
   }//end class condiments
-
-  public String eat(String eat)
-  {
-    return eat;
-  }
 
   //3 toString
   public String toString()

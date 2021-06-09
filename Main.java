@@ -78,12 +78,20 @@ class Main
     System.out.println("\n---Cooking at Rioux's House--- (Part 2)");
     System.out.println("You return home and prepare your groceries");
     //Methods from one class are called from another clas (prepare method)
-    String eat = new String ("You eat");
+    String finish = new String ("You finish cooking the fries and you eat it with the condiments. Congratualtions!");
     System.out.println(chips.prepare());
     System.out.println(cereal.prepare());
     System.out.println(potato.prepare());
     potato.cook();
     potato.condiments();
-    System.out.println(potato.eat(eat));
+    System.out.println();
+    System.out.println(eat(finish));
   }//end main method
+
+  //
+  public static String eat(String finish)
+  {
+    String output = finish.toUpperCase();
+    return output.toString();
+  }//end toString
 }//end Main class

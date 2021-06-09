@@ -64,12 +64,6 @@ public class ItemsParent
     System.out.println("You eat the food");
   }//end condiments method
 
-  //This method is overriden in the Potato class
-  public String eat()
-  {
-    return "You are now eating";
-  }//end condiments method
-
   //3 toString
   public String toString()
   {
