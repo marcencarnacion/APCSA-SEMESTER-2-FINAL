@@ -1,3 +1,4 @@
+//Class Composition used throughtout class
 public class ItemsParent 
 {
   //1 Instance Variables 
