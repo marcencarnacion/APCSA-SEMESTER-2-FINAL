@@ -76,10 +76,12 @@ public class Potatoes extends ItemsParent
       //data is counted in the context of a loop
       System.out.print("Condiment " + i + " is ");
       //data is moved in the context of a loop
+      //String is used as the data
       System.out.println(condiments.get(i));
     }//end for loop
 
     //data is added in the context of a loop
+    //String is used as the data
     for (int i = 0; i < size; i++)
     {
       System.out.println("Add a condiment: ");

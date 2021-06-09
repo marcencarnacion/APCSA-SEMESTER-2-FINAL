@@ -88,10 +88,13 @@ class Main
     System.out.println(eat(finish));
   }//end main method
 
-  //
+  //Passing a String object as a parameter to a method (Level 6)
+  //A string is passed as a parameter as data and uses methods toUpperCase and toString (Level 8)
   public static String eat(String finish)
   {
     String output = finish.toUpperCase();
+    
+    //Returning an object as a parameter to a method
     return output.toString();
   }//end toString
 }//end Main class
