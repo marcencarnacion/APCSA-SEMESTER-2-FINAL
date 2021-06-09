@@ -37,6 +37,9 @@ public class Potatoes extends ItemsParent
     return "You proceed to cut and peel the potato.";
   }//end prepare method
   
+  //Precondition: Uses for loop to decrement the time 
+  //Postcondition: Prints the time decreasing as the loop decrements
+
   //overriden method
   public void cook()
   {
@@ -60,10 +63,13 @@ public class Potatoes extends ItemsParent
     System.out.println("\nYou finished cooking the fries!");
   }//end method Cook
 
+  //Precondition: The user is given a selection of condiments and is prompted to add another condiment
+  //Postcondition: The method prints out the updated list of condiments after the user's input
+
   //overriden method
   public void condiments()
   {
-    
+    //ArrayList is used in at least one student-designed class
     ArrayList<String> condiments = new ArrayList<>();
     Scanner scan = new Scanner(System.in);
     condiments.add("ketchup");

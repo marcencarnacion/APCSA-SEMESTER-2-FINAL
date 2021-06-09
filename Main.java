@@ -19,10 +19,10 @@ class Main
     System.out.println("\n" + riouxStore.toString());
     System.out.println("\n---Rioux Store Simulator---");
     System.out.println("Objective: Get potatoes, chips, and cereal");
-
+    
     //Asking user what they would like to buy
     //Uses ArrayList and .add method
-    System.out.println("What item would you like to buy?");
+    System.out.println("What items would you like to buy?");
     GroceryList.add(scan.nextLine());
     System.out.println("Next item:");
     GroceryList.add(scan.nextLine());
@@ -77,16 +77,19 @@ class Main
     //This is the next part of the storyline: You go back home and prepare the food you bought.
     System.out.println("\n---Cooking at Rioux's House--- (Part 2)");
     System.out.println("You return home and prepare your groceries");
-    //Methods from one class are called from another clas (prepare method)
+    //Methods from one class are called from another clas (methods: prepare, cook, condiments)
     String finish = new String ("You finish cooking the fries and you eat it with the condiments. Congratualtions!");
     System.out.println(chips.prepare());
     System.out.println(cereal.prepare());
     System.out.println(potato.prepare());
     potato.cook();
     potato.condiments();
-    System.out.println();
+    System.out.println("\n");
     System.out.println(eat(finish));
   }//end main method
+
+  //Precondition: Passes a string object to the method
+  //Postcondition: Returns a modified version of the string
 
   //Passing a String object as a parameter to a method (Level 6)
   //A string is passed as a parameter as data and uses methods toUpperCase and toString (Level 8)
