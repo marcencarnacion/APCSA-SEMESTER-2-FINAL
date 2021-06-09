@@ -1,7 +1,7 @@
 //Class Composition used throughtout class
 public class Chips extends ItemsParent
 {
-  //1 Instance Variables
+  //1 Unique Instance Variables from parent class
   private String taste;
   private int calories;
 

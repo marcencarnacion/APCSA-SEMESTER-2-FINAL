@@ -7,12 +7,27 @@ public class ItemsParent
   public boolean isOnList;
 
   //2 Constructor
+  //Overloaded methods
   public ItemsParent(String itemName, int price, boolean isOnList)
   {
     this.itemName = itemName;
     this.price = price;
     this.isOnList = isOnList;
   }//end ItemsParent constructor (3 Argument)
+
+  public ItemsParent(String itemName, int price)
+  {
+    this.itemName = itemName;
+    this.price = price;
+    this.isOnList = false;
+  }//end ItemParent constructor (2 Argument)
+
+  public ItemsParent(String itemName)
+  {
+    this.itemName = itemName;
+    this.price = 0;
+    this.isOnList = false;
+  }//end ItemsParent constructor (1 Argument)
 
   public ItemsParent()
   {

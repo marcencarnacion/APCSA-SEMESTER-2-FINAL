@@ -1,7 +1,7 @@
 //Class Composition used throughtout class
 public class Potatoes extends ItemsParent
 {
-  //1 Instance Varibles
+  //1 Unique Instance Varibles from parent class
   private String type;
   private String locationGrown;
 
