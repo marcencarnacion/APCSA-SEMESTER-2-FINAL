@@ -32,6 +32,7 @@ public class Potatoes extends ItemsParent
   }//end Potatoes constructor (3 argument)
 
   //overriden method
+  @Override
   public String prepare()
   {
     return "You proceed to cut and peel the potato.";
@@ -41,6 +42,7 @@ public class Potatoes extends ItemsParent
   //Postcondition: Prints the time decreasing as the loop decrements
 
   //overriden method
+  @Override
   public void cook()
   {
     String[] ingredients = new String[]{"salt", "water"};
@@ -67,6 +69,7 @@ public class Potatoes extends ItemsParent
   //Postcondition: The method prints out the updated list of condiments after the user's input
 
   //overriden method
+  @Override
   public void condiments()
   {
     //ArrayList is used in at least one student-designed class
